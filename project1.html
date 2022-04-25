@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        .grn {
+            background-color: rgb(48, 45, 45);
+            height: 1200px;
+            padding: 50px;
+        }
+
+        .po {
+            background-color: blueviolet;
+            color: black;
+            display: flex;
+            gap: 20px;
+            height: 80px;
+            padding-top: 30px;
+            padding-left: 50px;
+        }
+
+        .steel {
+            background-color: coral;
+            height: 1000px;
+        }
+
+        .tex {
+            background-color: white;
+            color: black;
+            height: 800px;
+            width: 1100;
+            padding: 25px 30px;
+            box-shadow: 6px 6px 5px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .row1 {
+            display: flex;
+            gap: 400px;
+        }
+
+        .box {
+            width: 1170px;
+            padding: 10px;
+            border: 3px solid black;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grn">
+        <div class="container">
+            <div class="po">
+                <div class="bill">
+                    <button type="button" class="btn btn-warning">bill</button>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-secondary">PO</button>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-warning">GRN</button>
+                </div>
+            </div>
+            <div class="steel container">
+                <div class="row container py-2">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-2 ">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAeFBMVEUAAAD////W1tbGxsarq6uurq7b29vq6uoiIiLw8PBqamrf3991dXUWFhb29vYPDw+BgYGjo6OYmJiLi4scHBzQ0NBeXl5TU1NLS0tBQUG3t7fr6+vk5OQyMjI4ODi/v7+Tk5MrKytlZWVxcXGFhYVFRUU1NTVYWFgVrONJAAAE2UlEQVR4nO2diVYiMRBFaQVkkWZVWVRAZOb//3CgB8aRhvCqUkkHz7sfUCeXzlKppJtaTUZvXr9O41MY9cCqAcR+1MWGaWUI97rgTSR2w1aoRFDDOxrS0AIa0tAJDWloAg1p6ISGNDSBhjR0QkMamkDD2zec0JCGLmhIQxNoSEMnNKShCTSkoRMaFtRthUr0Kjcc2gqVoCENndCQhibQkIZOaEhDE2hIQydJGPbzqg1HtkIlaEhDJzSkoQk0pKETGtLQBBrS0EkShrV21YZjW58yNKShCxrS0AYa0tAFDWloAw1p6CINw4eqDQe2PmVoSEMXNKShDTSkoQsa0tAGGtLQBQ0LQn83kYY0dEJDGtrw8w1faUhDBzSkoQ00pKGLGzJ80sWmYcHG1qdM5YYdW58yP9+wS0MaOqAhDW2gIQ1dQP+kQ0NvaEhDFzSkoQ0/3xBqBQ19Yj/b+ihbQUOf2DT0BmrFXcDYNPSGhj6GUDZBQ28qN3yx9SkDGTZ1sWkYxxCqh9HwAjRMyLCriw2dTdLQGxr6GEI3O4MbPiGteNXFXtBwz9TWpwwNfQyhd/3TMHzQxU7D8D6cYR8y3BoLlYAMF31NaMxwZm10CmTYVhlOoO/5pWGoe4atGzJs9zSh15Dhu7XRKZBhPtGEfrslw5Ym9HsahstwhlskdCKGmcpwCoV+szY6BTNca0K/3JKhqhnPaRjOoWaoFq0OFFrVPSRghqrrBAMotGqIS8AMV5rQqzQMG1Az5uFCq5IJCXWoGapSFLT1zFQJoYQh1IxMExoqJoY3HGGGip34Ggqcq7YtEsaYoeLL6Y9Q4La90gnYlK4ZiFBOry1yCcCWZc3CjMVVHmsJ+A0arqSBP7G4yutWAmagobibQsfnWbYMIfWNHlQQ2/Ehi4ttLML/sVwNPKjNxDdOsOU+wkuyaGKaCa/2YDunLEJBGF4Qs2whiQqOQmUVTwb8a0uGDJgLxlgsdkAVsQJ4ssFqUHvqIc2OoB1q16XAvVwLOjgsCP69gT1wj4JTLPw3C1/D2IMPRHDYoAtFpj6YlCIwzJpXO2ofut1xQFU7kCP4zXe/+pWy2wy6YnIkwnq/B6sY/cM5OYCbsSNxBGvvslZly4s9dSbqDuq7x3IEc19Be3S29PALTgCPBP9fhCPCbrpnXrrK1MH29N8IXtE/Iu2mBYv5YNsqnmX/bTq+xzOjL6J1UuFs+h/5ottsdvEM5oTgH9j9YqNtoxe6c1cl6EbflEZEQc1c40+0eaZAM1F4Er4G9Q2wuG9J8CsK34FLbmZESrq/iD4SIz/CGnoWZkbwP8ktI9kI+xP+QOYM4rzZh+A3g88Rc7KpoI/u+YgmGP7A6QKxFsVFhEL3BbArYL7klQzCA5I6mZrgb2+76IkqZToi7grPsVZvZ29EsFZrBc5tKhfcdVRp5U1ElJOYqyiKZiB58JcNQUKti80oJ00QnSBb/ug7Qhct+56apzEEv3g0foxP1WVql5hY7qbaqT3Av0zNcrhheg/wwDN6YcrJPJ0p9AwvvlNOXo9Zu1exHXqkqt1x8n4FH3PVxLqoV7kRlPLcEGbkzWHw11/NWT82ulCxqt0cbpKdPK/Rm25Gy7vXC502f32arzrb4O8XRGCynv3eDFbD+oHReNB5ma2jPLg/O9VzW68VzDgAAAAASUVORK5CYII="
+                                    style="width: 80px" class="mt-4">
+                            </div>
+                            <div class="col-md-10">
+                                <h3>
+                                    PROGRESSIVE STEELS
+                                </h3>
+                                <div> #44,SEnd Rd,above successedge Academy,Tata silk
+                                    farm,<br>basavanagudi,bengluru,karntaka 560004
+                                </div>
+                                <hr style="color: green; height: 2px;">
+                                <div class="row">
+                                    <div class="col-md-5"> <span class="fw-bold">GSTIN:</span>29AAICC9312P1ZQ</div>
+                                    <div class="col-md-5"> <span class="fw-bold">PAN:</span>AABCU9719Q</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="tex">
+                        <div style="text-align: center;">
+                            <h1>TAX INVOICE</h1>
+                        </div>
+                        <hr style="color: black; height: 2px;">
+                        <div class="container">
+                            <div class="row1 py-2">
+                                <div class="col-md-2">
+                                    <table class="table table-borderless ">
+
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">invioce:</th>
+                                                <td>769807</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">inv.date:</th>
+                                                <td>06/12/2021</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">PO No:</th>
+                                                <td>769807</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">PO.DATE:</th>
+                                                <td>06/12/2021</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="row">
+                                    <div class="row">
+                                        <div class="col-md-10 "> <span class="fw-bold">bill To.</span><br>U S
+                                            Enterprice<br>#165,BTM 4th stage bangalore<br>560058,karntaka</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table table-bordered border-dark ">
+                                <tbody>
+                                    <tr>
+                                        <th>sl</th>
+                                        <th>product details</th>
+                                        <th>Qty(kg)</th>
+                                        <th>Rate</th>
+                                        <th>Amt in INR</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>product details</td>
+                                        <td>573</td>
+                                        <td>335</td>
+                                        <td>1,91,955</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>product details</td>
+                                        <td>573</td>
+                                        <td>335</td>
+                                        <td>1,91,955</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>product details</td>
+                                        <td>2</td>
+                                        <td>5,886</td>
+                                        <td>11,772</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="4" colspan="3"><span class="fw-bold">Name of the
+                                                Bank:</span>SBI<br><span class="fw-bold">Account
+                                                No:</span>123345678934<br><span class="fw-bold">IFSC
+                                                Code:</span>SBI000123</td>
+                                        <th>Sub Total</th>
+                                        <th>2,03,727</th>
+                                    </tr>
+                                    <tr>
+                                        <th>CGST</th>
+                                        <th>18,335</th>
+                                    </tr>
+                                    <tr>
+                                        <th>SGST</th>
+                                        <th>18,335</th>
+                                    </tr>
+                                    <tr>
+                                        <th>TOTAL</th>
+                                        <th>2,40,397</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div>
+                                <span class="fw-bold">Amount in words</span>Two Lakh forty thousand three hundred
+                                ninenty seven rupees
+                            </div>
+
+                        </div>
+                        <div class="box">
+                            <div>
+                                <h4 style="text-align: right;">For PROGRESSIVE STEEL</h4>
+                            </div>
+                            <div style="display: flex; gap: 700px; ">
+                                <p>Receiver's signature</p>
+                                <p>Authorised signature</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
