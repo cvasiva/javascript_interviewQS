@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logic Implimentions</title>
+</head>
+<body>
+  
+<script>
+    function bold(){
+        return{
+            isBold:false
+        }
+    }
+    // Largest number
+    arry=[1,1,2,2,5,5,7,9,1,22,66]
+    arry1=[3,44,55,68,75,5]
+    const largest=Math.max(...arry);
+    console.log("largest value" ,largest)
+    const merge=[...arry,...arry1];
+    console.log(merge)
+    //unique values
+    var unique=[...new Set(arry)]
+    console.log("uniquevalues......",unique)
+    //filter method 
+    let numbers = [-23,-20,-17, -12, -5, 0, 1, 5, 12, 19, 20];
+
+     let positive=numbers.filter(value=> value>=0)
+       
+     console.log( "positive values:" ,positive)
+     let freelancers = [
+         {name: "Harry", skill: "JavaScript"},
+         {name: "Mark", skill: "Python"},
+         {name: "David", skill:"JavaScript"}
+         ];
+      let freelance=freelancers.filter(function (value) {    
+        return value.skill="JavaScript"
+       })  
+       console.log("freelance",freelance)
+         
+       let cities = [
+    {name: 'Los Angeles', population: 3792621},
+    {name: 'New York', population: 8175133},
+    {name: 'Chicago', population: 2695598},
+    {name: 'Houston', population: 2099451},
+    {name: 'Philadelphia', population: 1526006}
+];
+let bigcities=[]
+for(let i=0;i<cities.length; i++){
+    if(cities[i].population>3000000){
+        bigcities.push(cities[i])
+    }
+}
+console.log("bigcities:..",bigcities)
+
+let latest =cities.filter( function(value){
+    return value.population>3000000
+})
+console.log("filter method cities:..",latest)
+
+var cubes = [
+ [1, 2, 3],
+ [4, 5, 6],    
+ [7, 8, 9],
+];
+ for(let i=0; i<cubes.length; i++){
+     let cube=cubes[i]
+     for(let j=0;j<cube.length;j++ ){
+         console.log( "cubes["+i+"] ["+j+"]"+cube[j]   )
+     }
+ }
+ var square=[1,2,3,45,6,89,9].map(function(value){
+     return Math.pow(value,2)
+ })
+ console.log("square",square)
+
+ var plural = ['Mango', 'Potato', 'Tomato',].map(function(value){
+     return value+this
+ } ,"es")
+ console.log("plural",plural)
+
+
+  var a=2;
+  var b=a;
+  var b=5;
+  console.log("a...,,",a)
+ 
+ var z=123;
+ console.log(parseFloat(z))
+ //add numbers in 
+ const num1=2;
+ const num2=3;
+ const sum =num1+num2;
+ console.log("sum.....",sum)
+
+//   sum of arry values
+var arr=[1,2,3,4,5,6,8,9];
+  var sums=0;
+for( var i=0; i<arr.length;i++){
+    sums+=arr[i];
+   
+}
+console.log("arry sum...",sums)
+
+
+</script>
+</body>
+</html>
